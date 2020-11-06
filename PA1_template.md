@@ -1,9 +1,9 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
 output: 
   html_document:
     keep_md: true
 ---
+# Reproducible Research: Peer Assessment 1
 Author: João Vitor Sousa Floriano
 
 
@@ -290,19 +290,19 @@ stepsLJoincsv %>% slice_sample(n=12)
 ```
 
 ```
-##          date interval     Steps  weekdays isWeekend
-## 1  2012-10-21     2350  0.000000    Sunday   weekend
-## 2  2012-11-21      550  0.000000 Wednesday   weekday
-## 3  2012-11-20      250  0.000000   Tuesday   weekday
-## 4  2012-11-16     2325  0.000000    Friday   weekday
-## 5  2012-11-30     1030 44.283019    Friday   weekday
-## 6  2012-10-31     2125  0.000000 Wednesday   weekday
-## 7  2012-10-19     1100  0.000000    Friday   weekday
-## 8  2012-11-19      420  0.000000    Monday   weekday
-## 9  2012-11-08     2005 30.000000  Thursday   weekday
-## 10 2012-10-08      535  6.056604    Monday   weekday
-## 11 2012-10-09      735 10.000000   Tuesday   weekday
-## 12 2012-11-07       40  0.000000 Wednesday   weekday
+##          date interval       Steps  weekdays isWeekend
+## 1  2012-11-09     2115  19.2452830    Friday   weekday
+## 2  2012-10-03     2235   0.0000000 Wednesday   weekday
+## 3  2012-10-13     1915   0.0000000  Saturday   weekend
+## 4  2012-11-16      130   0.0000000    Friday   weekday
+## 5  2012-11-15      705   0.0000000  Thursday   weekday
+## 6  2012-11-23       15   0.0000000    Friday   weekday
+## 7  2012-10-05     1420   0.0000000    Friday   weekday
+## 8  2012-11-30      225   0.1320755    Friday   weekday
+## 9  2012-10-04      950 144.0000000  Thursday   weekday
+## 10 2012-11-24     1900   0.0000000  Saturday   weekend
+## 11 2012-10-28     1250  32.0000000    Sunday   weekend
+## 12 2012-11-24     1110   0.0000000  Saturday   weekend
 ```
 In the sequence, we are going to make a panel time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
 
