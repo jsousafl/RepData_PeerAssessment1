@@ -504,19 +504,19 @@ stepsLJoincsv$weekdays &lt;- weekDaysEng
 stepsLJoincsv$isWeekend &lt;- factor((weekDaysEng %in% weekendDaysRef),levels=c(TRUE, FALSE), labels=c('weekend', 'weekday'))
 
 stepsLJoincsv %&gt;% slice_sample(n=12)</code></pre>
-<pre><code>##          date interval Steps  weekdays isWeekend
-## 1  2012-10-07       45     0    Sunday   weekend
-## 2  2012-10-05      145     9    Friday   weekday
-## 3  2012-10-10     1550     7 Wednesday   weekday
-## 4  2012-11-05      445     0    Monday   weekday
-## 5  2012-11-23     1300   441    Friday   weekday
-## 6  2012-11-13     2125     0   Tuesday   weekday
-## 7  2012-10-05      820   400    Friday   weekday
-## 8  2012-11-28      215     0 Wednesday   weekday
-## 9  2012-11-08      500     0  Thursday   weekday
-## 10 2012-10-14     1535   330    Sunday   weekend
-## 11 2012-10-14      220     0    Sunday   weekend
-## 12 2012-10-23     1735   198   Tuesday   weekday</code></pre>
+<pre><code>##          date interval     Steps  weekdays isWeekend
+## 1  2012-10-21     2350  0.000000    Sunday   weekend
+## 2  2012-11-21      550  0.000000 Wednesday   weekday
+## 3  2012-11-20      250  0.000000   Tuesday   weekday
+## 4  2012-11-16     2325  0.000000    Friday   weekday
+## 5  2012-11-30     1030 44.283019    Friday   weekday
+## 6  2012-10-31     2125  0.000000 Wednesday   weekday
+## 7  2012-10-19     1100  0.000000    Friday   weekday
+## 8  2012-11-19      420  0.000000    Monday   weekday
+## 9  2012-11-08     2005 30.000000  Thursday   weekday
+## 10 2012-10-08      535  6.056604    Monday   weekday
+## 11 2012-10-09      735 10.000000   Tuesday   weekday
+## 12 2012-11-07       40  0.000000 Wednesday   weekday</code></pre>
 <p>In the sequence, we are going to make a panel time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).</p>
 <p>In order to accomplish this task we are going to create a new data frame that has the average number of steps per 5-minute interval using the function aggregate (one for each one of the subsets)</p>
 <pre class="r"><code>stepsAvgInterval &lt;- with(stepsLJoincsv, aggregate(Steps,list(interval,isWeekend),mean,na.rm=TRUE))

@@ -6,6 +6,10 @@ output:
 ---
 Author: João Vitor Sousa Floriano
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.path = "figure/")
+```
+
 ## Loading and preprocessing the data
 
 In order to load the data into R, we need to read the steps dataset using the read.csv() function.
